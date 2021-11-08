@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .body {
+margin: 0;
+padding: 0;
+        }
+        
+        .daniel-profile{
+            background-color: hsl(263, 55%, 52%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 0px 10px 15px 10px;
+            position: relative;
+            box-shadow: 3px 3px 2px grey;
+
+        }
+        .icon-image{
+            position: absolute;
+            right: 20px;
+        }
+        .jonthan-profile{
+            background-color: hsl(217, 19%, 35%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 0px 10px 15px 10px;
+            box-shadow: 3px 3px 2px grey;
+
+        }
+
+        .jeanette-profile{
+            background-color: hsl(0, 41%, 12%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 0px 10px 15px 10px;
+            box-shadow: 3px 3px 2px grey;
+
+        }
+
+        .patrick-profile{
+            background-color: hsl(219, 29%, 14%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 0px 10px 15px 10px;
+            box-shadow: 3px 3px 2px grey;
+
+        }
+        .kira-profile{
+            background-color: rgb(10, 38, 90);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 0px 10px 15px 10px;
+            box-shadow: 3px 3px 2px grey;
+
+        }
+        
+        .profile{
+            display: flex;
+        }
+        .profile img{
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 20px 15px;
+        }
+        .profile-name h4{
+color: white;
+font-size: large;
+        }
+        .profile-name h5{
+color: white;
+opacity: .6;
+font-size: 15px;
+        }
+        .post-heading{
+            font-size: 24px;
+            color: white;
+            line-height: 35px;
+        }
+        .post-description{
+            color: white;
+            font-size: 20px;
+            opacity: .6;
+        }
+        @media only screen and (min-width: 600px){
+            .container{
+                display: grid;
+            grid-template-columns: 50% 50%;
+            background-color: rgb(233, 252, 252);
+                padding: 30px 30px;
+            }
+        }
+        @media only screen and (min-width: 992px){
+            .container{
+                background-color: rgb(233, 252, 252);
+                padding: 30px 30px;
+                display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            height: 100%;
+        }
+        .daniel-profile{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .kira-profile{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .patrick-profile{
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+        }
+            }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="daniel-profile">
+            <img class="icon-image" src="bg-pattern-quotation.svg">
+            <div class="profile">
+            
+                <div class="profile-pic">
+                    <img src="image-daniel.jpg" alt="daniel photo">
+                </div>
+                <div class="profile-name">
+<h4>Daniel Clifford</h4>
+<h5>Verified Graduate</h5>
+                </div>
+                </div>
+            <div class="post-heading">
+                <h3>I received a job offer mid-course, and the subjects I learned were current, if not more so, In the company I joined.I honestly feel I got every penny's worth.</h3>
+
+            </div>
+            <div class="post-description">
+                <p>I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.I signed up for the free intro course and found it as like fun.
+                  
+                </p>
+
+            </div>
+        </div>
+        <div class="jonthan-profile">
+            <div class="profile">
+                <div class="profile-pic">
+                    <img src="image-jonathan.jpg" alt="jonathan photo">
+                </div>
+                <div class="profile-name">
+<h4>Jonathan Walters</h4>
+<h5>Verified Graduate</h5>
+                </div>
+                </div>
+            <div class="post-heading">
+                <h3>The team was very supportive and kept me motivated</h3>
+
+            </div>
+            <div class="post-description">
+                <p>I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.
+                </p>
+
+            </div>
+        </div>
+        <div class="jeanette-profile">
+            <div class="profile">
+                <div class="profile-pic">
+                    <img src="image-jeanette.jpg" alt="jeanette photo">
+                </div>
+                <div class="profile-name">
+<h4>Jeanette Harmon</h4>
+<h5>Verified Graduate</h5>
+                </div>
+                </div>
+            <div class="post-heading">
+                <h3>An overall wonderful and rewarding experience</h3>
+
+            </div>
+            <div class="post-description">
+                <p>I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard.
+                </p>
+
+            </div>
+        </div>
+        <div class="patrick-profile">
+            <div class="profile">
+                <div class="profile-pic">
+                    <img src="image-patrick.jpg" alt="Patrick photo">
+                </div>
+                <div class="profile-name">
+<h4>Patrick Abrams</h4>
+<h5>Verified Graduate</h5>
+                </div>
+                </div>
+            <div class="post-heading">
+                <h3>Awesome teaching support from TAs who did bootcamp themselves.Getting guidance from them and learning from their experience was easy</h3>
+
+            </div>
+            <div class="post-description">
+                <p>I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here
+                </p>
+
+            </div>
+        </div>
+        <div class="kira-profile">
+            <div class="profile">
+                <div class="profile-pic">
+                    <img src="image-kira.jpg" alt="kira photo">
+                </div>
+                <div class="profile-name">
+<h4>Kira Whittle</h4>
+<h5>Verified Graduate</h5>
+                </div>
+                </div>
+            <div class="post-heading">
+                <h3>Such a life changing experience.Highly recommended!</h3>
+
+            </div>
+            <div class="post-description">
+                <p>I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.I was an EMT from many years before I joined the bootcamp.I have been looking to make a transition and have heard some people who had an amazing experience here.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
